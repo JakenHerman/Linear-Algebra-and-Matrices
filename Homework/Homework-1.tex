@@ -21,6 +21,22 @@ $$b_{1}x + b_{2}y + b_{3}z = e$$
 Justify your answer. (Here the variables are $x, y, z$, while the constants are $a_{1}, a_{2}, a_{3}, b_{1}, b_{2}, b_{3}, d,$ and $e$. Assume that at least one $a_{i}$ is nonzero and at least one $b_{i}$ is nonzero.)
 
 \subsection*{Solution:}
+If all $a_i$ and $b_{i}$ are nonzero then we can have 2 parallel planes (no solution), the exact same plane for all (solution is the plane), intersecting planes (intersection is solution).
+\\
+
+We could have a plane and a line which could also have no solution if the plane and the line are parallel. A plane and a line could also have an intersection, in which case the solution is the intersection. Finally, the plane could be the line, in which case the line is the solution.
+\\
+
+We could have 2 lines. If the lines are intersecting, the solution is the intersection. If the lines are the same then the solution is the line. If the lines are parallel we get no solution.
+\\
+
+We could have a plane and a single point. If the point is inside the plane, the solution is the point. If the plane and the point are not contained in one another, there is no solution.
+\\
+
+We could have a line and a single point. If the line and the point are separate, there is no solution. If the point is contained within the line, the solution is the point.
+\\
+
+Lastly, we could have 2 single points. Same as above, if the points are separate, there is no solution. If the points are the same, the solution is the point.
 \\
 \\
 \section*{Problem 2}
@@ -35,7 +51,35 @@ Assume that at least one $a_{i}$ is nonzero, at least one $b_{i}$ is nonzero, an
 
 \subsection*{Solution:}
 \\
+If all $a_{i}$, $b_{i}$, and $c_{i}$ are nonzero then we have parallel 3 planes (no solution), or 2 parallel planes and 1 plane intersecting those (no solution). Two planes could intersect and the third could pass through them, so the solution set would be a point.  All three planes could intersect, in which case the solution set is the intersection. Two planes ($M$) could be the same, and the third plane ($N$) is different, in which case the solution set would be if $M$ and $N$ are the same, there is no solution, if $M$ and $N$ intersect, the intersection is the solution, or if $M = N$, the solution is the plane $M$ and $N$ represent.
 \\
+
+We could have 2 planes and a line. If they are all parallel, there is no solution. If they all 3 intersect, the solution is the point at which all 3 intersect. If the line is contained in any, or both, of the planes, the solution is the line. 
+\\
+
+We could have 2 planes and 1 point. If they are all parallel, there is no solution. If the two planes are intersecting forming a cross and the point is contained in both of them, the solution is the point. If the point is contained in either of the planes, the solution is the point.
+\\
+
+We could have 3 lines. If the lines are all the same, the solution is the line. If the lines are parallel, there is no solution. If the lines intersect one another, the solution is the point at which they intersect. 
+\\
+
+We could have 2 lines and a plane. If they are all separate or parallel, there is no solution. If the two lines are the same and are contained within the plane, the solution is the line. If either of the lines are contained in the plane, the solution is the line. If the lines intersect either each other, or the plane, the solution is the point at which they intersect.
+\\
+
+We could have 2 lines and a point. If they are all separate or parallel, there is no solution. If the point is contained in either or both line, the solution is the point.
+\\
+
+We could have 3 points. If all 3 points are different, there is no solution. If all points are the same, the solution is the point. If any two points are the same, the solution is that point.
+\\
+
+We could have 2 points and 1 line. If they are separate or parallel, there is no solution. If either point is the same, the solution is the point. If the line goes through either or both points, the solution is the point at which they intersect. If the points are on two different points of the line, the solution set is both points.
+\\
+
+We could have 2 points and a plane. If they are separate or parallel, there is no solution. If either point is the same, the solution is the point. If either or both point is contained in the plane, the solution set is the point(s).
+\\
+
+Lastly, we could have 1 plane, 1 point, and 1 line. If they are separate or parallel, there is no solution. If the line or point (or both) are contained within the plane, the solution set is the line or plane or both. If the point is contained within the line, the solution is the point. If the line is contained in the plane, the solution is the line. If if they all intersect, the solution is the point at which they all intersect.
+
 \section*{Problem 3}
 \subsection*{Question:}
 Find the solution set of the linear system whose augmented matrix is 
@@ -62,7 +106,7 @@ Because the statement $0 = 1$ is an \textit{obvious} falsity, we can conclude th
 
 \section*{Problem 4}
 \subsection*{Question:}
-Using row operations on matrices to solve the system of equations: 
+Use row operations on matrices to solve the system of equations: 
 
 $$x_{1} - 3x_{3} = 8$$
 $$2x_{1} + 2x_{2} + 9x_{3} = 7$$
@@ -178,7 +222,7 @@ $$2x_{1} + 7x_{2} + x_{3} = -1$$
 We can stop here as the augmented matrix represents the linear system
 
 $$x_{1} = 14 + 17x_{3}$$
-$$x_{2} = -4 - 5x_{3}$$
+$$x_{2} = -4 - x_{3}$$
 $$0 = -1$$
 
 Because the statement $0 = -1$ is an \textit{obvious} falsity, we can conclude that there is \textbf{no solution set} for this linear system, as it is \textbf{inconsistent}.
