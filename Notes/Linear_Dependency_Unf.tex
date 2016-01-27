@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{Linear Dependency Relating to Span}
+\author{Jaken Herman }
+\date{January 2016}
+
+\begin{document}
+
+\maketitle
+
+\section*{Recall}
+The \textbf{span} of vectors $\vec{v}_{\,1}, \vec{v}_{\,2}, \dots , \vec{v}_{\,n} \in \mathbb{R}^{k}$ is span(\vec{v}_{\,1}, \vec{v}_{\,2}, \dots , \vec{v}_{\,n}) $ = \{x_1}\vec{v}_{\,1}, x_2\vec{v}_{\,2}, \dots , x_n\vec{v}_{\,n} : x_1, x_2, \dots , x_n \in \mathbb{R} \}$.
+\newline
+
+Last time, we said: 
+
+ \begin{itemize}
+     \item    \indent span($\vec{v}) = \{x_1\vec{v}_{\, 1} : x_1 \in \mathbb{R} \}$, which is a line (provided $\vec{v} \neq \vec{0}$) containing $\vec{0}$, in the same direction as $\vec{v}$.
+     \item \indent If $\vec{v}_{\,1}$ and $\vec{v}_{\,2}$ are nonzero vectors not in the same line then span($\vec{v}_{\,1}, \vec{v}_{\,2}$) is the plane containing $\vec{v}_{\,1}$, $\vec{v}_{\,2}$, and $\vec{0}$.
+ \end{itemize}
+
+
+\textbf{Ex.)}
+In $\mathbb{R}^3$, the equation of a plane containing $\vec{0}$ is $$ ax_1 + bx_2 + cx_3 = 0 $$ where at least one of $a, b, c \neq 0$. Assume $a \neq 0$. Then, to describe the solution set (i.e., plane) of $ ax_1 + bx_2 + cx_3 = 0 $, look at 
+
+\[
+\begin{bmatrix}
+a & b & c & 0
+\end{bmatrix} \mathrel{\mathop{\rightarrow}^{\mathrm{R_{1} \rightarrow (\dfrac{1}{a}R_{1})}}
+\begin{bmatrix}
+1  & $ \dfrac{b}{a} $ & $ \dfrac{c}{a} $ & 0
+\end{bmatrix}
+\]
+
+which represents $$x_1 + \dfrac{b}{a}x_2 + \dfrac{c}{a}x_3 = 0$$ which is $$x_1 = -\dfrac{b}{a}x_2 -\dfrac{c}{a}x_3$$ so the solution set is:
+
+\[ 
+\left \{
+ \left \Biggg[
+  \begin{tabular}{ccc}
+  $-\dfrac{b}{a}x_2 -\dfrac{c}{a}x_3$ \\
+  x_2 \\
+  x_{3}
+  \end{tabular}
+  \right \Biggg] : x_{2}, x_{3} \in \mathbb{R}
+\right \}.
+\]
+
+If we look at the information solely inside the brackets (not the braces), we can view that as
+
+
+
+\[ 
+\left \{
+ x_2  \left \Biggg[
+  \begin{tabular}{ccc}
+  $-\dfrac{b}{a}$ \\
+  1 \\
+  0
+  \end{tabular}
+  \right \Biggg]
+  + x_3
+   \left \Biggg[
+  \begin{tabular}{ccc}
+  $-\dfrac{c}{a}$ \\
+  0 \\
+  1
+  \end{tabular}
+  \right \Biggg] : x_2, x_3 \in \mathbb{R}
+\right \} = span(\left \Biggg[
+  \begin{tabular}{ccc}
+  $-\dfrac{b}{a}$ \\
+  1 \\
+  0
+  \end{tabular}
+  \right \Biggg],
+   \left \Biggg[
+  \begin{tabular}{ccc}
+  $-\dfrac{c}{a}$ \\
+  0 \\
+  1
+  \end{tabular}
+  \right \Biggg])
+\]
+
+so every plane in $\mathbb{R}^3$ containing the origin is the span of 2 vectors.
+
+\subsection*{Def: }
+Let $\vec{v}_{\,1}, \vec{v}_{\,2}, \dots , \vec{v}_{\,n}$ be vectors in $\mathbb{R}^k$. We say these vectors span $\mathbb{R}^k$ if \textbf{every} $\vec{b} \in \mathbb{R}^k$ is in span($\vec{v}_{\,1}, \vec{v}_{\,2}, \dots , \vec{v}_{\,n}$). That is, if every $\vec{b} \in \mathbb{R}^k$ can be writen as a linear combination of $\vec{v}_{\,1}, \vec{v}_{\,2}, \dots , \vec{v}_{\,n}$.
+
+\hfill
+
+\textbf{Ex. 2)}
+Do \dononbreakablespace 
+\begin{bmatrix}
+1 \\ 0 \\ 0
+\end{bmatrix},
+\begin{bmatrix}
+1 \\ 1 \\ 1
+\end{bmatrix}, 
+\begin{bmatrix}
+2 \\ 1 \\ -1
+\end{bmatrix}
+ \dononbreakablespace span $\mathbb{R}^3$?
+ 
+
+\textbf{Solution: )}
+Restating, if $\vec{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}$ is \textbf{any} vector in $\mathbb{R}^3$, do there exist weights $x_1, x_2, x_3$ such that $$x_1 \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} + x_3 \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}?$$
+ 
+That is, $$ x_1 + x_2 + 2x_3 = b_1$$ $$x_2 + x_3 = b_2$$ $$x_2 - x_3 = b_3$$ 
+
+We will call this system (*) for future reference. So we try to solve this:
+
+\end{document}
